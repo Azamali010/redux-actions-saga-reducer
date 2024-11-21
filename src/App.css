@@ -1,0 +1,75 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*
+Header CSS
+*/
+
+/* General styling for the header container */
+.header {
+  display: flex;
+  justify-content: flex-end; /* Align the cart-div to the right */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f8f8; /* Light gray background */
+  border-bottom: 1px solid #ddd; /* Subtle bottom border */
+  font-family: Arial, sans-serif;
+}
+
+/* Styling for the cart container */
+.cart-div {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between span and image */
+  cursor: pointer;
+}
+
+/* Styling for the cart item count */
+.cart-div span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Styling for the cart icon */
+.cart-div img {
+  width: 24px;
+  height: 24px;
+}
+
