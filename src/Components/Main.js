@@ -1,9 +1,14 @@
 import { useDispatch } from "react-redux";
-import { addToCart , RemoveFromCart, emptyCart} from "../Redux/action";
-import {productList} from "../Redux/productActions"
+import { addToCart, RemoveFromCart, emptyCart } from "../Redux/action";
+import { productList } from "../Redux/productActions";
+import { useSelector } from "react-redux";
+// import productData from "../Redux/productReducer"
 
 function Main() {
   const dispatch = useDispatch();
+
+  const data = useSelector((state)=>state.productData)
+  console.log("main components data: ",data)
 
   const product = {
     brand: "Apple",
@@ -26,15 +31,9 @@ function Main() {
         </button>
       </div>
       <div>
-        <button onClick={() => dispatch(emptyCart())}>
-          {" "}
-          Empty Cart
-        </button>
+        <button onClick={() => dispatch(emptyCart())}> Empty Cart</button>
 
-        <button onClick={() => dispatch(productList())}>
-          {" "}
-          Product Cart
-        </button>
+        <button onClick={() => dispatch(productList())}> Product Cart</button>
       </div>
     </>
   );
